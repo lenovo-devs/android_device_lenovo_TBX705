@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_TBX704.mk
+    $(LOCAL_DIR)/lineage_TBX705.mk

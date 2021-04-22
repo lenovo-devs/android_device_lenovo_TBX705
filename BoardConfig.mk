@@ -17,10 +17,10 @@
 # inherit from common tb-common
 -include device/lenovo/tb-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/lenovo/TBX704
+DEVICE_PATH := device/lenovo/TBX705
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := TB-X704A,TB-X704F,TB-X704L,TBX704,X704A,X704F,X704L,tb_x704a,tb_x704f,tb_x704l
+TARGET_OTA_ASSERT_DEVICE := TB-X705F,TB-X705L,TBX705,X705F,X705L,tb_x705f,tb_x705l
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
@@ -36,15 +36,17 @@ SF_PRIMARY_DISPLAY_ORIENTATION := 90
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_tbx704
-TARGET_RECOVERY_DEVICE_MODULES := libinit_tbx704
+TARGET_INIT_VENDOR_LIB := libinit_tbx705
+TARGET_RECOVERY_DEVICE_MODULES := libinit_tbx705
 
 # Kernel
-TARGET_KERNEL_CONFIG := lineageos_tbx704_defconfig
+TARGET_KERNEL_CONFIG := lineageos_tbx705_defconfig
 
 # Partitions
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4294967296
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 9652641280
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
+BOARD_VENDORIMAGE_PARTITION_SIZE := 1073741824
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_USERDATAIMAGE_PARTITION_SIZE :=  25270115328 # 25270131712 - 16384
 
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/GT9110P/gt9110p/gesture"
@@ -53,4 +55,4 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/GT9110P/gt9110p/gesture"
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Inherit from the proprietary version
--include vendor/lenovo/TBX704/BoardConfigVendor.mk
+-include vendor/lenovo/TBX705/BoardConfigVendor.mk

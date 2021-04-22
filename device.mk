@@ -23,7 +23,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/lenovo/TBX704/TBX704-vendor.mk)
+$(call inherit-product-if-exists, vendor/lenovo/TBX705/TBX705-vendor.mk)
 
 # Audio
 PRODUCT_COPY_FILES += \
