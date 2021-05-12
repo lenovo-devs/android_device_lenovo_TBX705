@@ -56,5 +56,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vndk-sp
 
+# Verity
+PRODUCT_SUPPORTS_BOOT_SIGNER := true
+PRODUCT_VERITY_SIGNING_KEY := build/target/product/security/verity
+
+PRODUCT_PACKAGES += \
+    verity_key
+
 # Inherit from tb-common
 $(call inherit-product, device/lenovo/tb-common/tb.mk)
