@@ -54,5 +54,13 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/GT9110P/gt9110p/gesture"
 # SELinux
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
+# Security patch level
+VENDOR_SECURITY_PATCH := 2018-08-05
+
+# Treble
+TARGET_COPY_OUT_VENDOR := vendor
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
+PRODUCT_FULL_TREBLE_OVERRIDE := true
+
 # Inherit from the proprietary version
 -include vendor/lenovo/TBX705/BoardConfigVendor.mk

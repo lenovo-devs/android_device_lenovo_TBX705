@@ -52,5 +52,9 @@ PRODUCT_COPY_FILES += \
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_prop.mk
 
+# VNDK
+PRODUCT_PACKAGES += \
+    vndk-sp
+
 # Inherit from tb-common
 $(call inherit-product, device/lenovo/tb-common/tb.mk)
